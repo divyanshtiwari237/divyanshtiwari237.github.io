@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GSoC 2022 Project Report "
-date: '2022-09-08 13:25:00 -0400'
+date: '2022-09-08 17:20:00 +0530'
 categories: open_source
 ---
 
