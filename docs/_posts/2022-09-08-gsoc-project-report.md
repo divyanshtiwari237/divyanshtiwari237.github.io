@@ -19,16 +19,17 @@ My project was about implementing symmplectic integrators into the Geant4 codeba
 
 ### Testbed Application:
 
-Before starting my work on the methods themselves, it was imperative to come with Geant4 testbed application that would be used to test these method out. As such I developed a Geant4 application that provides the  flexible choice of using a variety of integrator methods for their easy testing. The work done for this application can be found in the following [Merge Request](https://gitlab.cern.ch/geant4/geant4-dev/-/merge_requests/2930) to Geant4 developer repository. The testbed application code was submitted in the following [commit](https://gitlab.cern.ch/geant4/geant4-dev/-/commit/906aec08dfc2eccd6d49109efebfaeebeaae09cd?merge_request_iid=2930) of the Merge Request.
+Before starting my work on the methods themselves, it was imperative to come with Geant4 testbed application that would be used to test these method out. As such I developed a Geant4 application that provides the  flexible choice of using a variety of integrator methods for their easy testing. The work done for this application can be found in the following [Merge Request-1](https://gitlab.cern.ch/geant4/geant4-dev/-/merge_requests/2930) to Geant4 developer repository. The testbed application code was submitted in the following [commit](https://gitlab.cern.ch/geant4/geant4-dev/-/commit/906aec08dfc2eccd6d49109efebfaeebeaae09cd?merge_request_iid=2930) of the Merge Request.Alternatively, the code should be visible in the following [PR-1](https://github.com/Geant4/geant4/pull/48)
 
 ### Method-1: The Boris Algorithm:
 
 The first method that we decided to implement was the boris algorithm.The method is easy to use and conservers phase space volume, even though it is not symplectic. The algorithm was implemented by designing a stepper class (G4BorisScheme) and a driver class (G4BorisDriver).
-The implementation can be found in the following [Merge Request](https://gitlab.cern.ch/geant4/geant4-dev/-/merge_requests/2930).
+The implementation can be found in the following [Merge Request-1](https://gitlab.cern.ch/geant4/geant4-dev/-/merge_requests/2930).Alternatively, the code should be visible in the following [PR-2](https://github.com/Geant4/geant4/pull/49)
 
-### Method-2: The Boris-SDC
+### Method-2: The Boris-SDC (Work in Progress)
 
-After successfully  implementing the 2nd order Boris Algorithm, I worked on implementing a higher order method, namely, Boris-SDC.Boris-SDC was designed to provide a high order alternative to Boris, with strong conservation properties, improved accuracy and lower computational effort required to attain this accuracy.Boris-SDC is fundamentally a collocation method solved via spectral deferred corrections, using the same trick as the Boris algorithm to avoid an implicit velocity dependence.The method was described in detail in the following thesis. The method was implemented in the following [Merge Request-2](https://gitlab.cern.ch/geant4/geant4-dev/-/merge_requests/3029) for the case of a constant magnetic field. It still requires some minor corrections in the UpdateVelocity functions.
+After successfully  implementing the 2nd order Boris Algorithm, I worked on implementing a higher order method, namely, Boris-SDC.Boris-SDC was designed to provide a high order alternative to Boris, with strong conservation properties, improved accuracy and lower computational effort required to attain this accuracy.Boris-SDC is fundamentally a collocation method solved via spectral deferred corrections, using the same trick as the Boris algorithm to avoid an implicit velocity dependence.The method was described in detail in the following thesis. The method was implemented in the following [Merge Request-2](https://gitlab.cern.ch/geant4/geant4-dev/-/merge_requests/3029) for the case of a constant magnetic field. It still requires some minor corrections in the UpdateVelocity functions.Alternatively, the code should be visible in the following [PR-3](https://github.com/Geant4/geant4/pull/50)
+
 
 
 ## Conclusion
@@ -41,5 +42,8 @@ Overall I had a highly educative experience this summer and hope to continue con
 2. [Project Proposal](https://docs.google.com/document/d/1gLeoJs8HuCoLsN0AeceiVCH1QyNXHK9V3zmpyA0v0QM/edit?usp=sharing)
 3. [Merge Request-1](https://gitlab.cern.ch/geant4/geant4-dev/-/merge_requests/2930)
 4. [Merge Request-2](https://gitlab.cern.ch/geant4/geant4-dev/-/merge_requests/3029)
-5. [Thesis Used](https://etheses.whiterose.ac.uk/22831/1/Smedt%20Thesis%20Final%20v2.pdf)
-6. [Work Product Submission](https://docs.google.com/document/d/1p941HeP66Ubo56jffXnzlNsHEQRv72bfRCRtRul1x6U/edit?usp=sharing)
+5. [PR-1](https://github.com/Geant4/geant4/pull/48)
+6. [PR-2](https://github.com/Geant4/geant4/pull/49)
+7. [PR-3](https://github.com/Geant4/geant4/pull/50)
+8. [Thesis Used](https://etheses.whiterose.ac.uk/22831/1/Smedt%20Thesis%20Final%20v2.pdf)
+9. [Work Product Submission](https://docs.google.com/document/d/1p941HeP66Ubo56jffXnzlNsHEQRv72bfRCRtRul1x6U/edit?usp=sharing)
