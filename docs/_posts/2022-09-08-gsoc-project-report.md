@@ -7,7 +7,7 @@ categories: open_source
 
 
 ## Introduction
-The Geant4 toolkit is the basis of the particle transport applications used in High Energy Physics (HEP) experiments, at CERN, other laboratories worldwide and in a large number of diverse applications.A key ability of Geant4 is the propagation of charged particles in electromagnetic fields. A challenging application involves the tracking of particles in accelerators for a large number of turns.Specifically, the g-2 physics experiment at Fermilab seeks to uncover whether a yet undiscovered force influences how the spin of the muon behaves.This requires the use of integration schemes which preserve energy over the course of the simulation.Currently, none of the numerical integration schemes present in the toolkit are energy preserving.
+The Geant4 toolkit is the basis of the particle transport applications used in High Energy Physics (HEP) experiments, at CERN, other laboratories worldwide and in a large number of diverse applications.A key ability of Geant4 is the propagation of charged particles in electromagnetic fields. A challenging application involves the tracking of particles in accelerators for a large number of turns.Specifically, the muon g-2  experiment at Fermilab seeks to uncover whether a yet undiscovered force influences how the spin of the muon behaves.This requires the use of integration schemes which preserve phase space volume and  energy over the course of the simulation.Currently, none of the numerical integration schemes present in the toolkit are energy preserving.
 Hence, the aim of this project is to implement multiple methods which do not accumulate errors in energy and phase space volume over a large number of integration steps.
 
 
@@ -23,8 +23,7 @@ Before starting my work on the methods themselves, it was imperative to come wit
 
 ### Method-1: The Boris Algorithm:
 
-The first method that we decided to implement was the boris algorithm.The method is easy to use and conservers phase space volume, even though it is not symplectic. The algorithm was implemented by designing a stepper class (G4BorisScheme) and a driver class (G4BorisDriver).
-The implementation can be found in the following [Merge Request-1](https://gitlab.cern.ch/geant4/geant4-dev/-/merge_requests/2930).Alternatively, the code should be visible in the following [PR-2](https://github.com/Geant4/geant4/pull/49)
+The first method that we decided to implement was the boris algorithm.The 2nd order method is easy to implement and conservers phase space volume, even though it is not symplectic. The algorithm was implemented by designing a stepper class (G4BorisScheme) and a driver class (G4BorisDriver).The implementation can be found in the following [Merge Request-1](https://gitlab.cern.ch/geant4/geant4-dev/-/merge_requests/2930).Alternatively, the code should be visible in the following [PR-2](https://github.com/Geant4/geant4/pull/49)
 
 ### Method-2: The Boris-SDC (Work in Progress)
 
